@@ -22,6 +22,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.example.recyclopays.grafico.GraficoAparencia
 import com.example.recyclopays.screens.Metrica
+import com.example.recyclopays.screens.Credito
 import com.example.recyclopays.ui.theme.RecyclopaysTheme
 import kotlin.random.Random
 
@@ -51,7 +52,7 @@ class MainActivity : ComponentActivity() {
                     Metrica(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(600.dp),
+                            .height(605.dp),
                         xValues = listOf("Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "     Domingo"),
                         yValues = (0..6).map { (it + 1) * yStep },
                         points = points,
@@ -69,6 +70,7 @@ class MainActivity : ComponentActivity() {
                         )
                     )
                 }
+
             }
         }
     }
