@@ -22,6 +22,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -56,7 +58,7 @@ fun Credito(navController: NavHostController) {
                 fontSize = 18.sp,
                 fontFamily = FontFamily.Default,
                 fontWeight = FontWeight.SemiBold,
-                style = TextStyle(com.example.recyclopays.ui.theme.Purple500),
+                color = Color(0xFF13CB26),
                 modifier = Modifier.padding(8.dp)
             )
         }
@@ -298,7 +300,7 @@ fun Credito(navController: NavHostController) {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(55.dp)
-                .background(color = com.example.recyclopays.ui.theme.Purple500),
+                .background(color = Color(0xFF13CB26)),
             contentAlignment = Alignment.BottomCenter
         ) {
             Row(
@@ -312,24 +314,30 @@ fun Credito(navController: NavHostController) {
                 Icon(
                     imageVector = Icons.Default.Home,
                     contentDescription = "Home Icon",
-                    modifier = Modifier.size(30.dp).clickable { navController.navigate("login") },
+                    modifier = Modifier
+                        .size(30.dp)
+                        .clickable { navController.navigate("login") },
                     tint = Color.White
                 )
                 Icon(
                     imageVector = Icons.Default.Menu,
                     contentDescription = "Menu Icon",
-                    modifier = Modifier.size(30.dp).clickable { navController.navigate("metrica") },
+                    modifier = Modifier
+                        .size(30.dp)
+                        .clickable { navController.navigate("metrica") },
+                    tint = Color.White
+                )
+                Icon(
+                    painter = painterResource(id = com.example.recyclopays.R.drawable.baseline_qr_code_scanner_24),
+                    contentDescription = "Qr Code",
+                    modifier = Modifier
+                        .size(30.dp)
+                        .clickable { navController.navigate("qrcode") },
                     tint = Color.White
                 )
                 Icon(
                     imageVector = Icons.Default.AccountCircle,
-                    contentDescription = "Account Icon",
-                    modifier = Modifier.size(30.dp),
-                    tint = Color.White
-                )
-                Icon(
-                    imageVector = Icons.Default.Settings,
-                    contentDescription = "Settings Icon",
+                    contentDescription = "Account Circle",
                     modifier = Modifier.size(30.dp),
                     tint = Color.White
                 )

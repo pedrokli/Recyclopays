@@ -4,6 +4,7 @@ import android.graphics.Paint
 import android.graphics.PointF
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,9 +17,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -37,12 +36,14 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.example.recyclopays.R
 import com.example.recyclopays.grafico.GraficoAparencia
 
 @Composable
@@ -189,7 +190,7 @@ fun Metrica(navController: NavHostController,
             modifier = Modifier
                 .fillMaxWidth()
                 .height(55.dp)
-                .background(color = com.example.recyclopays.ui.theme.Purple500),
+                .background(color = Color(0xFF13CB26)),
             contentAlignment = Alignment.BottomCenter
         ) {
             Row(
@@ -203,24 +204,30 @@ fun Metrica(navController: NavHostController,
                 Icon(
                     imageVector = Icons.Default.Home,
                     contentDescription = "Home Icon",
-                    modifier = Modifier.size(30.dp),
+                    modifier = Modifier
+                        .size(30.dp)
+                        .clickable { navController.navigate("login") },
                     tint = Color.White
                 )
                 Icon(
-                    imageVector = Icons.Default.Favorite,
-                    contentDescription = "Favorite Icon",
-                    modifier = Modifier.size(30.dp),
+                    imageVector = Icons.Default.Menu,
+                    contentDescription = "Menu Icon",
+                    modifier = Modifier
+                        .size(30.dp)
+                        .clickable { navController.navigate("metrica") },
                     tint = Color.White
                 )
                 Icon(
-                    imageVector = Icons.Default.Settings,
-                    contentDescription = "Settings Icon",
-                    modifier = Modifier.size(30.dp),
+                    painter = painterResource(id = R.drawable.baseline_qr_code_scanner_24),
+                    contentDescription = "Qr Code",
+                    modifier = Modifier
+                        .size(30.dp)
+                        .clickable { navController.navigate("qrcode") },
                     tint = Color.White
                 )
                 Icon(
-                    imageVector = Icons.Default.Settings,
-                    contentDescription = "Settings Icon",
+                    imageVector = Icons.Default.AccountCircle,
+                    contentDescription = "Account Circle",
                     modifier = Modifier.size(30.dp),
                     tint = Color.White
                 )

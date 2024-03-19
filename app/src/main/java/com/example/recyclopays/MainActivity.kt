@@ -3,8 +3,6 @@ package com.example.recyclopays
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -21,6 +19,7 @@ import com.example.recyclopays.grafico.GraficoAparencia
 import com.example.recyclopays.screens.Credito
 import com.example.recyclopays.screens.Metrica
 import com.example.recyclopays.screens.LoginScreen
+import com.example.recyclopays.screens.QrCodeScreen
 import kotlin.random.Random
 
 class MainActivity : ComponentActivity() {
@@ -51,6 +50,7 @@ class MainActivity : ComponentActivity() {
                     ) {
                         composable(route = "login"){ LoginScreen(navController) }
                         composable(route = "credito"){ Credito(navController)}
+                        composable(route = "qrcode"){ QrCodeScreen(navController)}
                         composable(route = "metrica"){ Metrica(
                             navController = navController,
                             modifier = Modifier

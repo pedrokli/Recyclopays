@@ -121,7 +121,7 @@ fun LoginScreen(navController: NavHostController) {
                     .padding(top = 16.dp)
                     .align(Alignment.End),
                 colors = ButtonDefaults
-                    .buttonColors(Color(0xff13CB26))
+                    .buttonColors(Color(0xFF13CB26))
             ) {
                 Text(
                     text = "Entrar",
@@ -146,7 +146,7 @@ fun LoginScreen(navController: NavHostController) {
                 )
                 Text(
                     text = "Criar conta",
-                    color = Color(0xff13CB26),
+                    color = Color(0xFF13CB26),
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.padding(start = 4.dp)
                 )
