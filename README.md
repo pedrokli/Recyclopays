@@ -19,13 +19,18 @@
   
   <img src="https://github.com/pedrokli/Recyclopays/assets/109765945/e02de3ab-6592-45e6-9797-49fcbc085471" width="360" height="640"/>
   
-  > É possível rever o histórico de pontos feitos através da reciclagem
+  > É possível rever o histórico de pontos feitos através da reciclagem.
 
   ### Gerador de QRCode:
   
   <img src="https://github.com/pedrokli/Recyclopays/assets/109765945/d11714ab-b48e-4bad-9561-a9f3c4cef475" width="360" height="640"/>
 
-  > Aqui a a idéia é possuir um gerador de QRCode onde ele utilizaria a id do usuário para 
+  > Tela onde é possível encontrar o seu QR Code, como o backend ainda não foi implementado, colocamos o site da API que utilizaremos como exemplo.
+
+  ### Métricas:
   
   <img src="https://github.com/pedrokli/Recyclopays/assets/109765945/43cf7fea-5ba8-4710-8337-bbdbcc34380d" width="360" height="640"/>
+
+  > Aqui conseguimos acompanhar as métricas da sua reciclagem semanal ou mensal.
+  
 </div>
